@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:my_reference_in_flutter/modules/login_screen_with_video_background.dart';
 import 'package:my_reference_in_flutter/modules/progress_with_percentage.dart';
 
 void main() {
@@ -54,6 +55,26 @@ class _MyHomePageState extends State<MyHomePage> {
                     context,
                     MaterialPageRoute(
                         builder: (context) => const ProgressWithPercentage()
+                    )
+                );
+              },
+            ),
+          ),
+          Padding(
+            padding: const EdgeInsets.all(8.0),
+            child: ListTile(
+              title: const Text(
+                'Login Screen with video Background',
+              ),
+              tileColor: Colors.white,
+              leading: const Icon(Icons.arrow_forward_ios_outlined),
+              trailing: const Icon(Icons.video_call_outlined , size: 38, color: Colors.blue,),
+              onTap: ()
+              {
+                Navigator.push(
+                    context,
+                    MaterialPageRoute(
+                        builder: (context) => const LoginScreenWithVideoBackground()
                     )
                 );
               },
